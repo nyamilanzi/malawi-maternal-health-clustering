@@ -1,0 +1,37 @@
+# Raw DHS data files (not to be shared)
+*.DTA
+*.dta
+*.sav
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+*.egg-info/
+dist/
+.env
+
+# Node / npm
+node_modules/
+package-lock.json
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary / lock files
+~$*
+*.tmp
+
+# Large intermediate files (reproducible from scripts)
+results/harmonised_pooled.csv
+
+# Editor
+.vscode/
+.idea/

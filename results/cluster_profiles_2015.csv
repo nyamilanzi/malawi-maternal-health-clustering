@@ -1,0 +1,5 @@
+cluster,n,pct,adequate_anc,anc_visits,caesarean,early_anc,facility_delivery,first_anc_month,optimal_anc,pnc_received,skilled_anc,skilled_delivery,told_complications,label
+0,910,6.98,0.6022,3.9912,1.0,0.3473,1.0,4.1813,0.0198,0.467,0.9802,0.9912,0.3714,High facility + postnatal care
+1,1143,8.77,0.3342,3.1802,0.0,0.0,0.5179,5.21,0.0,0.4313,0.7288,0.2651,0.1969,Minimal utilisation
+2,7828,60.08,0.4291,3.4345,0.0,0.0,1.0,4.9812,0.0,0.4478,1.0,1.0,0.246,Late/inadequate ANC but facility delivery
+3,3149,24.17,0.7872,4.7567,0.0,0.9759,0.9616,2.9254,0.0524,0.4598,0.9654,0.94,0.2563,High facility + postnatal care

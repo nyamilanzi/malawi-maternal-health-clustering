@@ -1,0 +1,12 @@
+feature,type,value_2015,value_2024,change,test,p_value
+adequate_anc,binary,51.94,66.64,14.7,chi2,0.0
+anc_visits,continuous,3.771,4.215,0.445,welch_t,0.0
+caesarean,binary,6.98,11.47,4.48,chi2,0.0
+early_anc,binary,26.01,57.49,31.48,chi2,0.0
+facility_delivery,binary,94.84,97.56,2.72,chi2,0.0
+first_anc_month,continuous,4.449,3.338,-1.11,welch_t,0.0
+optimal_anc,binary,1.4,2.93,1.53,chi2,0.0
+pnc_received,binary,45.06,43.21,-1.85,chi2,0.0127
+skilled_anc,binary,96.65,98.44,1.79,chi2,0.0
+skilled_delivery,binary,92.04,97.05,5.01,chi2,0.0
+told_complications,binary,25.3,24.77,-0.53,chi2,0.4209

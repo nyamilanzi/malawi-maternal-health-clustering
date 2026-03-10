@@ -1,0 +1,110 @@
+======================================================================
+DATA HARMONISATION: MDHS 2015 AND MDHS 2024
+======================================================================
+
+----------------------------------------------------------------------
+LOADING DATASETS
+----------------------------------------------------------------------
+
+Loading 2015 dataset: MWIR7AFL.DTA
+  Shape: 24,562 women × 4,948 variables
+
+Loading 2024 dataset: MWIR81FL_compressed.dta
+  Shape: 21,587 women × 844 variables
+
+----------------------------------------------------------------------
+RESTRICTING TO WOMEN WITH BIRTH IN LAST 5 YEARS (v208 > 0)
+----------------------------------------------------------------------
+  2015 eligible: 13,448 women
+  2024 eligible: 10,536 women
+
+  --- Extracting features for 2015 ---
+    ✓ first_anc_month  non-missing=13,194  mean=4.44
+    ✓ anc_visits       non-missing=13,389  mean=3.71
+    ✓ skilled_anc      pct=95.0%
+    ✓ early_anc        pct=26.1%
+    ✓ adequate_anc     pct=51.0%
+    ✓ optimal_anc      pct=1.4%
+    ✓ told_complications  (m57e_1)  pct=24.9%
+    ✓ facility_delivery pct=94.4%
+    ✓ skilled_delivery  pct=91.6%
+    ✓ caesarean         pct=6.9%
+    ✓ pnc_received     (m70_1)  pct=44.6%
+
+  --- Extracting features for 2024 ---
+    ✓ first_anc_month  non-missing=6,946  mean=3.34
+    ✓ anc_visits       non-missing=7,091  mean=4.13
+    ✓ skilled_anc      pct=64.9%
+    ✓ early_anc        pct=57.5%
+    ✓ adequate_anc     pct=65.3%
+    ✓ optimal_anc      pct=2.9%
+    ✓ told_complications  (m57e_1)  pct=16.3%
+    ✓ facility_delivery pct=97.2%
+    ✓ skilled_delivery  pct=65.1%
+    ✓ caesarean         pct=11.5%
+    ✓ pnc_received     (m70_1)  pct=42.7%
+
+  --- Extracting sociodemographics for 2015 ---
+    Sociodemographic variables: ['age', 'age_group', 'residence', 'wealth_quintile', 'education', 'births_last5', 'parity', 'region', 'married', 'distance_problem']
+
+  --- Extracting sociodemographics for 2024 ---
+    Sociodemographic variables: ['age', 'age_group', 'residence', 'wealth_quintile', 'education', 'births_last5', 'parity', 'region', 'married', 'distance_problem']
+
+----------------------------------------------------------------------
+ALIGNING FEATURE SETS
+----------------------------------------------------------------------
+  Common clustering features: ['adequate_anc', 'anc_visits', 'caesarean', 'early_anc', 'facility_delivery', 'first_anc_month', 'optimal_anc', 'pnc_received', 'skilled_anc', 'skilled_delivery', 'told_complications']
+  Only in 2015: none
+  Only in 2024: none
+
+----------------------------------------------------------------------
+MISSING DATA HANDLING (COMPLETE-CASE ANALYSIS)
+----------------------------------------------------------------------
+
+  2015 missing (%):
+    adequate_anc: 0.4%
+    anc_visits: 0.4%
+    caesarean: 0.3%
+    early_anc: 1.9%
+    facility_delivery: 0.0%
+    first_anc_month: 1.9%
+    optimal_anc: 0.4%
+    pnc_received: 0.8%
+    skilled_anc: 0.0%
+    skilled_delivery: 0.0%
+    told_complications: 0.0%
+
+  2024 missing (%):
+    adequate_anc: 32.7%
+    anc_visits: 32.7%
+    caesarean: 32.7%
+    early_anc: 34.1%
+    facility_delivery: 32.7%
+    first_anc_month: 34.1%
+    optimal_anc: 32.7%
+    pnc_received: 32.9%
+    skilled_anc: 0.0%
+    skilled_delivery: 0.0%
+    told_complications: 0.0%
+
+  Final clustering features (11): ['adequate_anc', 'anc_visits', 'caesarean', 'early_anc', 'facility_delivery', 'first_anc_month', 'optimal_anc', 'pnc_received', 'skilled_anc', 'skilled_delivery', 'told_complications']
+
+  2015 complete cases: 13,030 / 13,448 (96.9%)
+  2024 complete cases: 6,925 / 10,536 (65.7%)
+
+----------------------------------------------------------------------
+DESCRIPTIVE COMPARISON OF CLUSTERING FEATURES BY YEAR
+----------------------------------------------------------------------
+  adequate_anc: 2015 → 51.9% (n=6768)  |  2024 → 66.6% (n=4615)
+  anc_visits: 2015 → mean=3.77, sd=1.62  |  2024 → mean=4.22, sd=1.52
+  caesarean: 2015 → 7.0% (n=910)  |  2024 → 11.5% (n=794)
+  early_anc: 2015 → 26.0% (n=3389)  |  2024 → 57.5% (n=3981)
+  facility_delivery: 2015 → 94.8% (n=12358)  |  2024 → 97.6% (n=6756)
+  first_anc_month: 2015 → mean=4.45, sd=1.31  |  2024 → mean=3.34, sd=1.34
+  optimal_anc: 2015 → 1.4% (n=183)  |  2024 → 2.9% (n=203)
+  pnc_received: 2015 → 45.1% (n=5871)  |  2024 → 43.2% (n=2992)
+  skilled_anc: 2015 → 96.6% (n=12593)  |  2024 → 98.4% (n=6817)
+  skilled_delivery: 2015 → 92.0% (n=11993)  |  2024 → 97.1% (n=6721)
+  told_complications: 2015 → 25.3% (n=3296)  |  2024 → 24.8% (n=1715)
+
+  ✓ Figure saved: 01_feature_comparison_2015_vs_2024.png
