@@ -195,9 +195,7 @@ Key packages (see `requirements.txt` for full list):
 
 ---
 
-## Citation
-
-> [Authors]. Temporal Patterns of Maternal Health Care Utilisation in Malawi: A Comparative Unsupervised Learning Analysis of the 2015 and 2024 Demographic and Health Surveys. *[Journal]*. [Year]. [DOI]
+]
 
 ---
 
