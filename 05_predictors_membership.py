@@ -79,9 +79,25 @@ def prepare_predictors(df, predictor_cols):
     y = df_sub['cluster']
     X_raw = df_sub[keep].copy()
 
-    # Encode categorical variables — drop_first=True removes perfect multicollinearity
+    # Encode categorical variables with explicit reference categories
     cat_cols = X_raw.select_dtypes(include=['object', 'category']).columns.tolist()
-    X_enc = pd.get_dummies(X_raw, columns=cat_cols, drop_first=True)
+    X_enc = pd.get_dummies(X_raw, columns=cat_cols, drop_first=False)
+
+    # Drop chosen reference dummies (one per categorical variable)
+    # Reference categories: residence=Rural, wealth_quintile=Poorest,
+    #                        education=No education, region=first (lowest code)
+    to_drop = []
+    # Residence: Rural as reference → drop Rural dummy
+    to_drop += [c for c in X_enc.columns if c == 'residence_Rural']
+    # Wealth: Poorest as reference → drop Poorest dummy
+    to_drop += [c for c in X_enc.columns if c == 'wealth_quintile_Poorest']
+    # Education: No education as reference → drop No education dummy
+    to_drop += [c for c in X_enc.columns if c == 'education_No education']
+    # Region: first (alphabetically sorted) category as reference
+    region_dummies = sorted(c for c in X_enc.columns if c.startswith('region_'))
+    if region_dummies:
+        to_drop.append(region_dummies[0])
+    X_enc = X_enc.drop(columns=[c for c in to_drop if c in X_enc.columns])
 
     return X_enc, y, X_raw
 
