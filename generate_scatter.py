@@ -22,18 +22,18 @@ FEATURES = [
 ]
 
 # ─── Cluster labels ────────────────────────────────────────────────────────────
-# Correct: c0=910(7%)=C-C, c1=1143(8.8%)=C-D, c2=7828(60.1%)=C-B, c3=3149(24.2%)=C-A
-# Correct: c0=3232(46.7%)=C-1, c1=344(5.0%)=C-3, c2=3349(48.4%)=C-2
+# c0=910(7%)=Cluster 3, c1=1143(8.8%)=Cluster 4, c2=7828(60.1%)=Cluster 2, c3=3149(24.2%)=Cluster 1
+# c0=3232(46.7%)=Cluster 1, c1=344(5.0%)=Cluster 3, c2=3349(48.4%)=Cluster 2
 LABELS_2015 = {
-    0: 'C-section / high PNC\n(C-C)',
-    1: 'Minimal utilisation\n(C-D)',
-    2: 'Late ANC, facility\ndelivery (C-B)',
-    3: 'Comprehensive ANC\n& delivery (C-A)',
+    0: 'C-section / high PNC\n(Cluster 3)',
+    1: 'Minimal utilisation\n(Cluster 4)',
+    2: 'Late ANC, facility\ndelivery (Cluster 2)',
+    3: 'Comprehensive ANC\n& delivery (Cluster 1)',
 }
 LABELS_2024 = {
-    0: 'High coverage\n(C-1)',
-    1: 'Moderate ANC, limited\ndelivery (C-3)',
-    2: 'Late ANC, facility\ndelivery (C-2)',
+    0: 'High coverage\n(Cluster 1)',
+    1: 'Moderate ANC, limited\ndelivery (Cluster 3)',
+    2: 'Late ANC, facility\ndelivery (Cluster 2)',
 }
 
 # Semantic colours: blue=comprehensive, orange=late ANC, green=C-section, red=minimal, purple=moderate

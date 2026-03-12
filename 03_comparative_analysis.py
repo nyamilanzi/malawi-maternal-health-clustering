@@ -297,7 +297,7 @@ def plot_prevalence_change(prev_df, out_path):
         offset = 0.2 if bar.get_height() >= 0 else -0.2
         ax2.text(bar.get_x() + bar.get_width()/2,
                  bar.get_height() + offset,
-                 f"{bar.get_height():+.1f}pp", ha='center', va=va, fontsize=9)
+                 f"{bar.get_height():+.1f}", ha='center', va=va, fontsize=9)
 
     plt.suptitle('Temporal Changes in Maternal Care Utilisation Patterns',
                  fontsize=13, fontweight='bold')

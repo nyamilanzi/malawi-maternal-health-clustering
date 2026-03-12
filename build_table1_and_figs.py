@@ -27,21 +27,19 @@ FEATURES = ['first_anc_month','anc_visits','skilled_anc','early_anc',
             'facility_delivery','skilled_delivery','caesarean','pnc_received']
 
 # ─── Remap cluster IDs to match manuscript labels ──────────────────────────────
-# 2015: 0=Comprehensive(A), 1=Late/facility(B), 2=C-section(C), 3=Minimal(D)
-# 2024: 0=High coverage(1), 1=Late/facility(2), 2=Moderate/limited(3)
-# Correct mappings verified against n values in clusters_2015/2024.csv:
-# 2015: c0=910 (7.0%)=C-C, c1=1143 (8.8%)=C-D, c2=7828 (60.1%)=C-B, c3=3149 (24.2%)=C-A
-# 2024: c0=3232 (46.7%)=C-1, c1=344 (5.0%)=C-3, c2=3349 (48.4%)=C-2
+# 2015: c0=910 (7.0%)=Cluster 3, c1=1143 (8.8%)=Cluster 4,
+#        c2=7828 (60.1%)=Cluster 2, c3=3149 (24.2%)=Cluster 1
+# 2024: c0=3232 (46.7%)=Cluster 1, c1=344 (5.0%)=Cluster 3, c2=3349 (48.4%)=Cluster 2
 CLUSTER_LABELS_15 = {
-    0: "C-section/\nhigh PNC\n(C-C)",
-    1: "Minimal\nutilisation\n(C-D)",
-    2: "Late ANC,\nfacility delivery\n(C-B)",
-    3: "Comprehensive\nANC+delivery\n(C-A)",
+    0: "C-section /\nhigh PNC\n(Cluster 3)",
+    1: "Minimal\nutilisation\n(Cluster 4)",
+    2: "Late ANC,\nfacility delivery\n(Cluster 2)",
+    3: "Comprehensive\nANC+delivery\n(Cluster 1)",
 }
 CLUSTER_LABELS_24 = {
-    0: "High\ncoverage\n(C-1)",
-    1: "Moderate ANC,\nlimited delivery\n(C-3)",
-    2: "Late ANC,\nfacility delivery\n(C-2)",
+    0: "High\ncoverage\n(Cluster 1)",
+    1: "Moderate ANC,\nlimited delivery\n(Cluster 3)",
+    2: "Late ANC,\nfacility delivery\n(Cluster 2)",
 }
 # Semantic colours: blue=comprehensive/high-coverage, orange=late ANC, green=C-section, red=minimal, purple=moderate/limited
 COLORS_15 = {0:'#3dae2b', 1:'#c5003e', 2:'#e87722', 3:'#1a6faf'}

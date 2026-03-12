@@ -79,12 +79,10 @@ def prepare_predictors(df, predictor_cols):
     y = df_sub['cluster']
     X_raw = df_sub[keep].copy()
 
-    # Encode categorical variables
+    # Encode categorical variables — drop_first=True removes perfect multicollinearity
     cat_cols = X_raw.select_dtypes(include=['object', 'category']).columns.tolist()
-    X_enc = pd.get_dummies(X_raw, columns=cat_cols, drop_first=False)
+    X_enc = pd.get_dummies(X_raw, columns=cat_cols, drop_first=True)
 
-    # Drop one dummy per category to avoid multicollinearity
-    # (handled by statsmodels ref category)
     return X_enc, y, X_raw
 
 
@@ -113,42 +111,41 @@ def run_multinomial(X, y, year_label):
     ref_cat = y.value_counts().idxmax()
     print(f"    Reference cluster: {ref_cat}")
 
-    # Re-code y so reference is 0 for statsmodels
-    classes = sorted(y.unique())
-    y_recode = y.map({c: (0 if c == ref_cat else i + 1)
-                      for i, c in enumerate([x for x in classes if x != ref_cat])})
-    # statsmodels MNLogit uses last category as reference by default
-    # Easier: use sklearn which handles reference clearly
-    scaler = StandardScaler()
-    X_s = scaler.fit_transform(X.astype(float))
+    # Remap y: ref_cat → 0, non-ref clusters → 1, 2, 3...
+    non_ref = sorted([c for c in y.unique() if c != ref_cat])
+    remap = {ref_cat: 0}
+    remap.update({c: i + 1 for i, c in enumerate(non_ref)})
+    # params cols are 0-indexed (0,1,2 for 3 non-ref outcomes);
+    # conf_int uses string of the y_r value ('1','2','3')
+    # col_idx i → y_r value (i+1) → original cluster non_ref[i]
+    yr_to_orig = {i + 1: c for i, c in enumerate(non_ref)}
 
-    # Try statsmodels first (gives proper p-values)
+    y_r = y.map(remap)
+    X_sm = sm.add_constant(X.astype(float))
+
     try:
-        X_sm = sm.add_constant(X.astype(float))
-        model = sm.MNLogit(y.astype(int), X_sm)
-        result = model.fit(maxiter=500, method='nm', disp=False)
-        # Verify covariance is available
-        _ = result.bse
+        model = sm.MNLogit(y_r, X_sm)
+        result = model.fit(maxiter=500, method='bfgs', disp=False)
+        _ = result.bse  # triggers ValueError if covariance unavailable
+        conf = result.conf_int(alpha=0.05)
 
         rows = []
-        for c in sorted(y.unique()):
-            if c == ref_cat:
-                continue
-            coef = result.params[c]
-            pvals = result.pvalues[c]
-            conf = result.conf_int(alpha=0.05)
-            ci_lo = conf.loc[:, (c, 0)]
-            ci_hi = conf.loc[:, (c, 1)]
+        for col_idx in result.params.columns:   # col_idx = 0, 1, 2 (0-indexed)
+            yr_val = col_idx + 1                  # corresponding y_r value
+            orig_cluster = yr_to_orig[yr_val]     # back to original cluster ID
+            coef  = result.params[col_idx]
+            pvals = result.pvalues[col_idx]
+            ci_sub = conf.loc[str(yr_val)]        # conf_int indexed by string of y_r value
             for var in coef.index:
                 if var == 'const':
                     continue
                 rows.append({
-                    'year': year_label, 'cluster': c, 'ref_cluster': ref_cat,
-                    'predictor': var,
+                    'year': year_label, 'cluster': orig_cluster,
+                    'ref_cluster': ref_cat, 'predictor': var,
                     'coef': round(coef[var], 4),
                     'OR': round(np.exp(coef[var]), 4),
-                    'CI_lo': round(np.exp(ci_lo[var]), 4),
-                    'CI_hi': round(np.exp(ci_hi[var]), 4),
+                    'CI_lo': round(np.exp(ci_sub.loc[var, 'lower']), 4),
+                    'CI_hi': round(np.exp(ci_sub.loc[var, 'upper']), 4),
                     'p_value': round(pvals[var], 5)
                 })
         df_res = pd.DataFrame(rows)
@@ -156,10 +153,10 @@ def run_multinomial(X, y, year_label):
         return df_res, result
 
     except Exception as e:
-        print(f"    ⚠ MNLogit failed ({type(e).__name__}). Using sklearn fallback.")
-        # sklearn fallback (no p-values but robust)
-        clf = LogisticRegression(max_iter=2000, C=1.0, random_state=42,
-                                 solver='lbfgs')
+        print(f"    ⚠ MNLogit failed ({type(e).__name__}: {e}). Using sklearn fallback.")
+        scaler = StandardScaler()
+        X_s = scaler.fit_transform(X.astype(float))
+        clf = LogisticRegression(max_iter=2000, C=1.0, random_state=42, solver='lbfgs')
         clf.fit(X_s, y)
         rows = []
         for i, c in enumerate(clf.classes_):

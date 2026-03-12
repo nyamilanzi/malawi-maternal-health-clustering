@@ -161,10 +161,10 @@
       3
     ],
     "labels": {
-      "0": "C-section/\nhigh PNC\n(C-C)",
-      "1": "Minimal\nutilisation\n(C-D)",
-      "2": "Late ANC,\nfacility delivery\n(C-B)",
-      "3": "Comprehensive\nANC+delivery\n(C-A)"
+      "0": "C-section /\nhigh PNC\n(Cluster 3)",
+      "1": "Minimal\nutilisation\n(Cluster 4)",
+      "2": "Late ANC,\nfacility delivery\n(Cluster 2)",
+      "3": "Comprehensive\nANC+delivery\n(Cluster 1)"
     }
   },
   "2024": {
@@ -309,9 +309,9 @@
       2
     ],
     "labels": {
-      "0": "High\ncoverage\n(C-1)",
-      "1": "Moderate ANC,\nlimited delivery\n(C-3)",
-      "2": "Late ANC,\nfacility delivery\n(C-2)"
+      "0": "High\ncoverage\n(Cluster 1)",
+      "1": "Moderate ANC,\nlimited delivery\n(Cluster 3)",
+      "2": "Late ANC,\nfacility delivery\n(Cluster 2)"
     }
   }
 }

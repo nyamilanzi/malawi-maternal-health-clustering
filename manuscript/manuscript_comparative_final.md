@@ -11,7 +11,7 @@
 
 **Corresponding author:** [Name] | [Email] | [Address]
 
-**Word count (main text, excluding abstract/tables/references):** ~3,319
+**Word count (main text, excluding abstract/tables/references):** ~3,500
 **Running title:** Maternal care utilisation clusters in Malawi: 2015 vs 2024
 **Keywords:** maternal health care utilisation, unsupervised learning, cluster analysis, Gaussian mixture models, continuum of care, temporal trends, Malawi, sub-Saharan Africa, adolescent maternal health, health equity
 
@@ -78,6 +78,8 @@ Cluster membership was significantly associated with residence in both survey ro
 Random Forest classifiers achieved cross-validated macro F1 scores of 0.213 in 2015 and 0.328 in 2024, indicating modest but improving ability to predict cluster membership from sociodemographic variables alone. In 2024, the high-coverage cluster had F1 = 0.427 and the late ANC/facility cluster F1 = 0.464, while the smallest cluster (moderate ANC/limited delivery) had F1 = 0.094, reflecting the difficulty of sociodemographic profiling for the most heterogeneous group. In both survey rounds, parity and age were the most important predictors (Table 5). In 2015, the ranking was: parity (MDI = 0.180), age (0.166), richest wealth quintile (0.106), region (0.076), and rural residence (0.068). In 2024, the ordering shifted to: age (0.269), parity (0.167), region (0.094), marital status (0.058), and perceived distance to facility (0.057). The decline in the relative importance of wealth quintile, combined with the emergence of geographic distance as a predictor, may reflect a transition from economic to geographic and social barriers as the dominant constraints on comprehensive utilisation.
 
 [INSERT FIGURE 5 ABOUT HERE]
+
+Multinomial logistic regression with Cluster 2 (C-B, Late ANC, facility delivery) as the reference category provided adjusted odds ratios for all sociodemographic predictors simultaneously (Table 6; McFadden R² = 0.023 in 2015 and 0.011 in 2024). In 2015, membership in the C-section cluster (C-C) was significantly predicted by older age (OR per year: 1.06; 95% CI 1.04–1.08; p < 0.001), lower parity (0.73; 0.68–0.79; p < 0.001), urban residence (1.24; 1.02–1.50; p = 0.032), and higher wealth quintile (richer: 1.48, 1.17–1.88; richest: 1.81, 1.40–2.34; both p ≤ 0.001); all sub-higher education categories were associated with substantially reduced odds (OR 0.45–0.59; all p ≤ 0.004). The minimal utilisation cluster (C-D) was characterised by higher parity (1.09; 1.04–1.16; p = 0.001), greater perceived distance barrier to care (1.39; 1.21–1.59; p < 0.001), and lower urban residence odds (0.73; 0.57–0.94; p = 0.013). Women in the comprehensive care cluster (C-A) were more likely to be married (1.14; 1.03–1.27; p = 0.010), from the richest wealth quintile (1.28; 1.09–1.50; p = 0.002), and less likely to reside in urban areas (0.82; 0.71–0.94; p = 0.004) or to have less than higher education (OR 0.62–0.69; all p ≤ 0.022). In 2024, women in the high-coverage cluster (C-1) were significantly more likely to be married (1.22; 1.09–1.36; p < 0.001), of lower parity (0.91; 0.86–0.96; p = 0.001), and marginally older (1.02; 1.00–1.03; p = 0.034); all sub-higher education categories were strongly associated with reduced membership odds (OR 0.43–0.50; all p < 0.001). No predictor reached statistical significance for the moderate ANC/limited delivery cluster (C-3) in 2024.
 
 [INSERT FIGURE 6 ABOUT HERE]
 
@@ -188,6 +190,48 @@ In conclusion, Malawi's maternal health system achieved substantial and measurab
 | 5 | Residence: Rural | 0.068 | Distance to facility (barrier) | 0.057 |
 
 *MDI = Mean Decrease in Impurity. Cross-validated macro F1: 2015 = 0.213; 2024 = 0.328.*
+
+---
+
+### Table 6. Adjusted Odds Ratios from Multinomial Logistic Regression: Predictors of Cluster Membership
+
+**Panel A: MDHS 2015** (Reference: C-B, Late ANC, facility delivery, n = 7,828)
+
+| Predictor | C-C: C-section (n = 910) | C-D: Minimal utilisation (n = 1,143) | C-A: Comprehensive ANC+delivery (n = 3,149) |
+|---|---|---|---|
+| Age (per year) | 1.06 (1.04–1.08)*** | 0.99 (0.97–1.01) | 1.01 (1.00–1.03)* |
+| Parity | 0.73 (0.68–0.79)*** | 1.09 (1.04–1.16)** | 0.97 (0.93–1.00) |
+| Married | 0.85 (0.73–1.00) | 0.88 (0.76–1.02) | 1.14 (1.03–1.27)* |
+| Distance barrier | 1.05 (0.90–1.22) | 1.39 (1.21–1.59)*** | 0.99 (0.90–1.08) |
+| Region | 0.81 (0.74–0.89)*** | 0.94 (0.86–1.02) | 1.02 (0.97–1.08) |
+| Urban residence | 1.24 (1.02–1.50)* | 0.73 (0.57–0.94)* | 0.82 (0.71–0.94)** |
+| Wealth: Poorer | 0.98 (0.76–1.26) | 1.05 (0.87–1.26) | 1.05 (0.93–1.20) |
+| Wealth: Poorest | 0.87 (0.67–1.14) | 1.13 (0.94–1.36) | 0.96 (0.84–1.10) |
+| Wealth: Richer | 1.48 (1.17–1.88)** | 0.92 (0.75–1.13) | 1.04 (0.91–1.19) |
+| Wealth: Richest | 1.81 (1.40–2.34)*** | 0.84 (0.65–1.10) | 1.28 (1.09–1.50)** |
+| Education: No education | 0.45 (0.28–0.72)*** | 2.13 (0.84–5.43) | 0.62 (0.44–0.88)** |
+| Education: Primary | 0.54 (0.37–0.78)** | 1.85 (0.74–4.63) | 0.69 (0.50–0.95)* |
+| Education: Secondary | 0.59 (0.41–0.85)** | 1.29 (0.51–3.24) | 0.62 (0.45–0.85)** |
+
+**Panel B: MDHS 2024** (Reference: C-2, Late ANC, facility delivery, n = 3,349)
+
+| Predictor | C-1: High coverage (n = 3,232) | C-3: Moderate ANC, limited delivery (n = 344) |
+|---|---|---|
+| Age (per year) | 1.02 (1.00–1.03)* | 1.00 (0.97–1.03) |
+| Parity | 0.91 (0.86–0.96)*** | 1.09 (0.98–1.22) |
+| Married | 1.22 (1.09–1.36)*** | 1.21 (0.94–1.56) |
+| Distance barrier | 1.03 (0.93–1.14) | 0.89 (0.70–1.13) |
+| Region | 1.06 (0.99–1.13) | 1.00 (0.86–1.15) |
+| Urban residence | 1.02 (0.87–1.19) | 0.76 (0.50–1.14) |
+| Wealth: Poorer | 0.97 (0.82–1.15) | 1.40 (0.97–2.02) |
+| Wealth: Poorest | 0.96 (0.82–1.12) | 1.34 (0.94–1.90) |
+| Wealth: Richer | 0.95 (0.80–1.12) | 1.05 (0.71–1.55) |
+| Wealth: Richest | 1.15 (0.95–1.39) | 1.06 (0.66–1.70) |
+| Education: No education | 0.43 (0.28–0.65)*** | 0.90 (0.31–2.62) |
+| Education: Primary | 0.48 (0.34–0.70)*** | 0.67 (0.25–1.81) |
+| Education: Secondary | 0.50 (0.35–0.71)*** | 0.74 (0.28–1.97) |
+
+*OR = adjusted odds ratio; 95% confidence interval in parentheses. Reference cluster: C-B in 2015; C-2 in 2024. Reference categories within predictors: residence = rural; wealth quintile = middle; education = higher education. * p < 0.05; ** p < 0.01; *** p < 0.001. McFadden R² = 0.023 (2015); 0.011 (2024).*
 
 ---
 
