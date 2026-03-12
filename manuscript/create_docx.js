@@ -271,7 +271,9 @@ C.push(p("We examined how group membership varied across four sociodemographic f
 C.push(pb());
 C.push(h1("Results"));
 
-C.push(p("The 2015 analysis sample comprised **13,030 women** (mean age 28.1 years) and the 2024 sample comprised **6,925 women** (Table 1). Both samples were predominantly rural (approximately 83% in 2015 and 81% in 2024). Between survey rounds, all ANC indicators improved significantly (Table 2). Most notably, **early ANC initiation** increased from 26.0% to 57.5%, the largest single improvement observed across all indicators. Mean first ANC visit month advanced from 4.45 to 3.34 months into pregnancy (p < 0.001). Adequate ANC coverage increased from 51.9% to 66.6% (p < 0.001), and skilled birth attendance rose from 92.0% to 97.1% (p < 0.001). Facility delivery also improved from 94.8% to 97.6% (p < 0.001), while the caesarean section rate increased from 7.0% to 11.5% (p < 0.001). PNC receipt declined marginally from 45.1% to 43.2% (p\u00A0=\u00A00.013), and reporting of being informed about danger signs was stable (25.3% vs 24.8%; p\u00A0=\u00A00.421)."));
+C.push(p("The sociodemographic characteristics of the two analytic samples are summarised in Table\u00A01. The 2024 sample was significantly younger (mean age 26.9\u00A0\u00B1\u00A06.9 vs 28.1\u00A0\u00B1\u00A07.0 years; p\u00A0<\u00A00.001), with a notably higher proportion of adolescent women aged 15\u201319 years (13.4% vs 8.5%). Women in 2024 had lower mean parity (2.7\u00A0\u00B1\u00A01.8 vs 3.3\u00A0\u00B1\u00A02.1; p\u00A0<\u00A00.001) and were less likely to be married (69.6% vs 76.9%; p\u00A0<\u00A00.001), consistent with trends toward later marriage and smaller family sizes. The education profile improved markedly: the proportion with no formal education halved from 11.6% to 6.2%, while secondary education rose from 21.4% to 25.8% (overall p\u00A0<\u00A00.001). Both samples were predominantly rural (82.7% and 81.3% respectively; p\u00A0=\u00A00.013), with similar regional distributions (p\u00A0=\u00A00.058). The proportion reporting distance as a barrier to care declined from 53.4% to 49.3% (p\u00A0<\u00A00.001)."));
+
+C.push(p("The 2015 analysis sample comprised **13,030 women** (mean age 28.1 years) and the 2024 sample comprised **6,925 women** (Table 1). Both samples were predominantly rural (approximately 83% in 2015 and 81% in 2024). Between survey rounds, all ANC indicators improved significantly (Table 3). Most notably, **early ANC initiation** increased from 26.0% to 57.5%, the largest single improvement observed across all indicators. Mean first ANC visit month advanced from 4.45 to 3.34 months into pregnancy (p < 0.001). Adequate ANC coverage increased from 51.9% to 66.6% (p < 0.001), and skilled birth attendance rose from 92.0% to 97.1% (p < 0.001). Facility delivery also improved from 94.8% to 97.6% (p < 0.001), while the caesarean section rate increased from 7.0% to 11.5% (p < 0.001). PNC receipt declined marginally from 45.1% to 43.2% (p\u00A0=\u00A00.013), and reporting of being informed about danger signs was stable (25.3% vs 24.8%; p\u00A0=\u00A00.421)."));
 
 C.push(sp(120));
 C.push(new Paragraph({
@@ -290,7 +292,7 @@ C.push(new Paragraph({
   children: [new TextRun({ text: "Figure 1. Model selection for GMM clustering: normalised BIC (left axis, lower is better) and silhouette coefficient (right axis, higher is better) across K\u00A0=\u00A02\u20136 for MDHS 2015 (left panel) and MDHS 2024 (right panel). The dashed vertical red line marks the selected optimal K.", italics: true, size: 18, font: "Times New Roman" })]
 }));
 
-C.push(p("Statistical fit criteria identified four distinct groups as optimal for 2015 (each comprising at least 7% of women) and three groups for 2024 (each at least 5%). Their profiles are summarised in Table 3, with a visual representation of individual women\u2019s assignments shown in Figure 6."));
+C.push(p("Statistical fit criteria identified four distinct groups as optimal for 2015 (each comprising at least 7% of women) and three groups for 2024 (each at least 5%). Their profiles are summarised in Table 4, with a visual representation of individual women\u2019s assignments shown in Figure 6."));
 
 C.push(p("In 2015, four distinct utilisation patterns were identified. The largest group, comprising 60.1% of women (n\u00A0=\u00A07,828), showed late ANC initiation (mean first visit at 5.0 months into pregnancy), very low early initiation (0%), and adequate ANC in only 42.9% of women, yet near-universal facility delivery and skilled birth attendance. This \u201Clate ANC, universal facility delivery\u201D pattern represents the dominant mode of care-seeking in 2015, in which women reliably arrived at health facilities for delivery but engaged insufficiently with the antenatal period. The second cluster (24.2%; n\u00A0=\u00A03,149) represented a comprehensive pattern, with early ANC initiation in 97.6% of women, mean first visit at 2.9 months, adequate ANC in 78.7%, near-universal facility delivery, and 46.0% receiving PNC. A third, smaller group (7.0%; n\u00A0=\u00A0910) was characterised by universal caesarean section delivery, high facility-based care, and moderate ANC engagement. The fourth cluster (8.8%; n\u00A0=\u00A01,143) represented the most marginalised pattern: late ANC, adequate ANC in only 33.4% of women, low facility delivery (51.8%), and very low skilled birth attendance (26.5%), identifying a group with limited engagement across the entire continuum of care."));
 
@@ -335,15 +337,15 @@ C.push(p("Cross-year alignment using the Hungarian algorithm mapped the 2024 hig
 
 C.push(figPlaceholder("INSERT FIGURE 3 ABOUT HERE \u2014 Temporal change: cluster prevalences, feature differences, PCA centroids"));
 
-C.push(p("Cluster membership was significantly associated with residence in both survey rounds (Table 4). In 2015, the association was medium-strength (Cram\u00E9r\u2019s V\u00A0=\u00A00.123; p\u00A0<\u00A00.001), with rural women showing markedly higher rates of minimal utilisation (9.7% vs 4.5%). By 2024, the association weakened substantially (V\u00A0=\u00A00.055; p\u00A0<\u00A00.001), and the high-coverage cluster prevalence was 51.5% among urban women compared to 45.6% among rural women. Both groups showed large improvements, with rural women\u2019s high-coverage rates increasing from 24.4% to 45.6%. A significant socioeconomic gradient was present in both years, though the effect size narrowed (2015: V\u00A0=\u00A00.090; 2024: V\u00A0=\u00A00.059; both p\u00A0<\u00A00.001). In 2015, minimal utilisation was four times more common among the poorest quintile (11.6%) than the richest (4.6%). By 2024, both extremes showed large improvements: high-coverage care was present in 53.2% of the richest compared to 43.5% of the poorest women, with a gap of 9.7 percent. Age-group associations were significant in both years with stable but small effect sizes (2015: V\u00A0=\u00A00.046; 2024: V\u00A0=\u00A00.042). In 2015, adolescent women aged 15\u201319 showed the lowest rates of comprehensive care (19.7%) and the highest rates of late ANC/facility delivery (66.0%), compared with young adults aged 20\u201334, among whom comprehensive care stood at 24.6%. In 2024, adolescents showed a large absolute improvement, with 43.3% in the high-coverage cluster, yet a gap of 4.9 percent relative to young adults (48.2%) persisted. Education was significantly associated with cluster membership in both years (2015: V\u00A0=\u00A00.089; 2024: V\u00A0=\u00A00.066), with higher-educated women more likely to be in the comprehensive or high-coverage cluster."));
+C.push(p("Cluster membership was significantly associated with residence in both survey rounds (Table 5). In 2015, the association was medium-strength (Cram\u00E9r\u2019s V\u00A0=\u00A00.123; p\u00A0<\u00A00.001), with rural women showing markedly higher rates of minimal utilisation (9.7% vs 4.5%). By 2024, the association weakened substantially (V\u00A0=\u00A00.055; p\u00A0<\u00A00.001), and the high-coverage cluster prevalence was 51.5% among urban women compared to 45.6% among rural women. Both groups showed large improvements, with rural women\u2019s high-coverage rates increasing from 24.4% to 45.6%. A significant socioeconomic gradient was present in both years, though the effect size narrowed (2015: V\u00A0=\u00A00.090; 2024: V\u00A0=\u00A00.059; both p\u00A0<\u00A00.001). In 2015, minimal utilisation was four times more common among the poorest quintile (11.6%) than the richest (4.6%). By 2024, both extremes showed large improvements: high-coverage care was present in 53.2% of the richest compared to 43.5% of the poorest women, with a gap of 9.7 percent. Age-group associations were significant in both years with stable but small effect sizes (2015: V\u00A0=\u00A00.046; 2024: V\u00A0=\u00A00.042). In 2015, adolescent women aged 15\u201319 showed the lowest rates of comprehensive care (19.7%) and the highest rates of late ANC/facility delivery (66.0%), compared with young adults aged 20\u201334, among whom comprehensive care stood at 24.6%. In 2024, adolescents showed a large absolute improvement, with 43.3% in the high-coverage cluster, yet a gap of 4.9 percent relative to young adults (48.2%) persisted. Education was significantly associated with cluster membership in both years (2015: V\u00A0=\u00A00.089; 2024: V\u00A0=\u00A00.066), with higher-educated women more likely to be in the comprehensive or high-coverage cluster."));
 
 C.push(figPlaceholder("INSERT FIGURE 4 ABOUT HERE \u2014 Cluster prevalence by residence, wealth quintile and age group"));
 
-C.push(p("The ability to predict group membership from sociodemographic factors alone was modest but improved between survey years (cross-validated overall accuracy: 0.21 in 2015 versus 0.33 in 2024). In 2024, the high-coverage and late ANC/facility groups were most accurately identified (accuracy scores of 0.43 and 0.46 respectively), while the small moderate ANC/limited delivery group was the hardest to distinguish sociodemographically (0.09), suggesting its members are sociodemographically diverse. In both years, parity and age were the strongest predictors of group membership (Table 5). In 2015, household wealth ranked third. By 2024, geographic region and perceived distance to a health facility had replaced wealth among the top five predictors. This shift suggests that as financial barriers to care have been progressively addressed, geographic access and social factors have become the dominant drivers of differences in care-seeking behaviour."));
+C.push(p("The ability to predict group membership from sociodemographic factors alone was modest but improved between survey years (cross-validated overall accuracy: 0.21 in 2015 versus 0.33 in 2024). In 2024, the high-coverage and late ANC/facility groups were most accurately identified (accuracy scores of 0.43 and 0.46 respectively), while the small moderate ANC/limited delivery group was the hardest to distinguish sociodemographically (0.09), suggesting its members are sociodemographically diverse. In both years, parity and age were the strongest predictors of group membership (Table 6). In 2015, household wealth ranked third. By 2024, geographic region and perceived distance to a health facility had replaced wealth among the top five predictors. This shift suggests that as financial barriers to care have been progressively addressed, geographic access and social factors have become the dominant drivers of differences in care-seeking behaviour."));
 
 C.push(figPlaceholder("INSERT FIGURE 5 ABOUT HERE \u2014 Random Forest variable importance and per-cluster F1"));
 
-C.push(p("Multinomial logistic regression with the late ANC/facility delivery group as reference provided adjusted odds ratios for all sociodemographic predictors simultaneously (Table\u00A06; McFadden R\u00B2\u00A0=\u00A00.023 in 2015 and 0.011 in 2024). In 2015, membership in the C-section group was significantly predicted by older age (OR per year: 1.06; 95%\u00A0CI 1.04\u20131.08; p\u00A0<\u00A00.001), lower parity (0.73; 0.68\u20130.79; p\u00A0<\u00A00.001), urban residence (1.24; 1.02\u20131.50; p\u00A0=\u00A00.032), and higher wealth quintile (richer: 1.48, 1.17\u20131.88; richest: 1.81, 1.40\u20132.34; both p\u00A0\u22640.001); all sub-higher education categories were associated with substantially reduced odds (OR 0.45\u20130.59; all p\u00A0\u22640.004). The minimal utilisation group was characterised by higher parity (1.09; 1.04\u20131.16; p\u00A0=\u00A00.001), greater perceived distance barrier to care (1.39; 1.21\u20131.59; p\u00A0<\u00A00.001), and lower urban residence odds (0.73; 0.57\u20130.94; p\u00A0=\u00A00.013). Women in the comprehensive care group were more likely to be married (1.14; 1.03\u20131.27; p\u00A0=\u00A00.010), from the richest wealth quintile (1.28; 1.09\u20131.50; p\u00A0=\u00A00.002), and less likely to reside in urban areas (0.82; 0.71\u20130.94; p\u00A0=\u00A00.004) or to have less than higher education (OR 0.62\u20130.69; all p\u00A0\u22640.022). In 2024, women in the high-coverage group were significantly more likely to be married (1.22; 1.09\u20131.36; p\u00A0<\u00A00.001), of lower parity (0.91; 0.86\u20130.96; p\u00A0=\u00A00.001), and marginally older (1.02; 1.00\u20131.03; p\u00A0=\u00A00.034); all sub-higher education categories were strongly associated with reduced membership odds (OR 0.43\u20130.50; all p\u00A0<\u00A00.001). No predictor reached statistical significance for the moderate ANC/limited delivery group in 2024."));
+C.push(p("Multinomial logistic regression with the late ANC/facility delivery group as reference provided adjusted odds ratios for all sociodemographic predictors simultaneously (Table\u00A07; McFadden R\u00B2\u00A0=\u00A00.023 in 2015 and 0.011 in 2024). In 2015, membership in the C-section group was significantly predicted by older age (OR per year: 1.06; 95%\u00A0CI 1.04\u20131.08; p\u00A0<\u00A00.001), lower parity (0.73; 0.68\u20130.79; p\u00A0<\u00A00.001), urban residence (1.24; 1.02\u20131.50; p\u00A0=\u00A00.032), and higher wealth quintile (richer: 1.48, 1.17\u20131.88; richest: 1.81, 1.40\u20132.34; both p\u00A0\u22640.001); all sub-higher education categories were associated with substantially reduced odds (OR 0.45\u20130.59; all p\u00A0\u22640.004). The minimal utilisation group was characterised by higher parity (1.09; 1.04\u20131.16; p\u00A0=\u00A00.001), greater perceived distance barrier to care (1.39; 1.21\u20131.59; p\u00A0<\u00A00.001), and lower urban residence odds (0.73; 0.57\u20130.94; p\u00A0=\u00A00.013). Women in the comprehensive care group were more likely to be married (1.14; 1.03\u20131.27; p\u00A0=\u00A00.010), from the richest wealth quintile (1.28; 1.09\u20131.50; p\u00A0=\u00A00.002), and less likely to reside in urban areas (0.82; 0.71\u20130.94; p\u00A0=\u00A00.004) or to have less than higher education (OR 0.62\u20130.69; all p\u00A0\u22640.022). In 2024, women in the high-coverage group were significantly more likely to be married (1.22; 1.09\u20131.36; p\u00A0<\u00A00.001), of lower parity (0.91; 0.86\u20130.96; p\u00A0=\u00A00.001), and marginally older (1.02; 1.00\u20131.03; p\u00A0=\u00A00.034); all sub-higher education categories were strongly associated with reduced membership odds (OR 0.43\u20130.50; all p\u00A0<\u00A00.001). No predictor reached statistical significance for the moderate ANC/limited delivery group in 2024."));
 
 // Figure 6 embedded
 C.push(sp(120));
@@ -391,8 +393,60 @@ C.push(p("In conclusion, Malawi\u2019s maternal health system achieved substanti
 C.push(pb());
 C.push(h1("Tables"));
 
-// Table 1a — 2015 cluster-stratified demographics (reference paper style)
-C.push(tblTitle("Table 1a. Sociodemographic Characteristics by Cluster: MDHS 2015 (K\u00A0=\u00A04)"));
+// ─── Table 1: Overall sociodemographic comparison ─────────────────────────────
+C.push(tblTitle("Table 1. Sociodemographic Characteristics of the 2015 and 2024 Analytic Samples"));
+{
+  const cw = [3120, 2040, 2040, 2160];
+  const subHdrRow = (label, p15, p24, pval) =>
+    new TableRow({ children: [
+      td(label, cw[0], 'E0EAF6', true),
+      td(p15,   cw[1], 'E0EAF6', false, true),
+      td(p24,   cw[2], 'E0EAF6', false, true),
+      td(pval,  cw[3], 'E0EAF6', false, true)
+    ]});
+  const dataRow2 = (label, v15, v24, pval, indent) =>
+    new TableRow({ children: [
+      td((indent ? '  ' : '') + label, cw[0], null, false),
+      td(v15, cw[1], null, false, true),
+      td(v24, cw[2], null, false, true),
+      td(pval, cw[3], null, false, true)
+    ]});
+
+  C.push(new Table({ width:{size:CONTENT_W, type:WidthType.DXA}, columnWidths:cw, rows:[
+    new TableRow({ children:[hdrCell("Characteristic",cw[0]), hdrCell("MDHS 2015\n(n\u00A0=\u00A013,030)",cw[1]), hdrCell("MDHS 2024\n(n\u00A0=\u00A06,925)",cw[2]), hdrCell("p-value",cw[3])] }),
+    new TableRow({ children:[td("Age, years (mean \u00B1 SD)",cw[0],null,true), td("28.1 \u00B1 7.0",cw[1],null,false,true), td("26.9 \u00B1 6.9",cw[2],null,false,true), td("<0.001",cw[3],null,false,true)] }),
+    subHdrRow("Age group, n (%)", "", "", "<0.001"),
+    dataRow2("Adolescent (15\u201319)", "1,109 (8.5%)", "928 (13.4%)", "", true),
+    dataRow2("Young adult (20\u201334)", "9,343 (71.7%)", "4,861 (70.2%)", "", true),
+    dataRow2("Older (35\u201349)", "2,578 (19.8%)", "1,136 (16.4%)", "", true),
+    subHdrRow("Residence, n (%)", "", "", "0.013"),
+    dataRow2("Urban", "2,257 (17.3%)", "1,298 (18.7%)", "", true),
+    dataRow2("Rural", "10,773 (82.7%)", "5,627 (81.3%)", "", true),
+    subHdrRow("Wealth quintile, n (%)", "", "", "<0.001"),
+    dataRow2("Poorest", "2,767 (21.2%)", "1,527 (22.1%)", "", true),
+    dataRow2("Poorer", "2,715 (20.8%)", "1,208 (17.4%)", "", true),
+    dataRow2("Middle", "2,511 (19.3%)", "1,196 (17.3%)", "", true),
+    dataRow2("Richer", "2,510 (19.3%)", "1,289 (18.6%)", "", true),
+    dataRow2("Richest", "2,527 (19.4%)", "1,448 (20.9%)", "", true),
+    subHdrRow("Education level, n (%)", "", "", "<0.001"),
+    dataRow2("No education", "1,516 (11.6%)", "427 (6.2%)", "", true),
+    dataRow2("Primary", "8,484 (65.1%)", "4,522 (65.3%)", "", true),
+    dataRow2("Secondary", "2,786 (21.4%)", "1,786 (25.8%)", "", true),
+    dataRow2("Higher", "244 (1.9%)", "190 (2.7%)", "", true),
+    new TableRow({ children:[td("Parity (mean \u00B1 SD)",cw[0],null,true), td("3.3 \u00B1 2.1",cw[1],null,false,true), td("2.7 \u00B1 1.8",cw[2],null,false,true), td("<0.001",cw[3],null,false,true)] }),
+    new TableRow({ children:[td("Married, n (%)",cw[0],null,true), td("10,022 (76.9%)",cw[1],null,false,true), td("4,820 (69.6%)",cw[2],null,false,true), td("<0.001",cw[3],null,false,true)] }),
+    new TableRow({ children:[td("Distance barrier to care, n (%)",cw[0],null,true), td("6,963 (53.4%)",cw[1],null,false,true), td("3,417 (49.3%)",cw[2],null,false,true), td("<0.001",cw[3],null,false,true)] }),
+    subHdrRow("Region, n (%)", "", "", "0.058"),
+    dataRow2("Northern", "2,490 (19.1%)", "1,418 (20.5%)", "", true),
+    dataRow2("Central", "4,514 (34.6%)", "2,332 (33.7%)", "", true),
+    dataRow2("Southern", "6,026 (46.2%)", "3,175 (45.8%)", "", true),
+  ]}));
+  C.push(note("p-values: Welch\u2019s t-test (continuous), chi-square test (categorical). p-value shown on the category header row for multi-level variables."));
+}
+
+// Table 2a — 2015 cluster-stratified demographics (reference paper style)
+C.push(sp(280));
+C.push(tblTitle("Table 2a. Sociodemographic Characteristics by Cluster: MDHS 2015 (K\u00A0=\u00A04)"));
 {
   // Display order: C-A (c3), C-B (c2), C-C (c0), C-D (c1) — matching manuscript labels
   const cw = [2560, 1160, 1160, 1160, 1160, 1160];
@@ -405,9 +459,9 @@ C.push(tblTitle("Table 1a. Sociodemographic Characteristics by Cluster: MDHS 201
   C.push(note("C-A: Comprehensive ANC\u00A0+\u00A0delivery (n\u00A0=\u00A03,149; 24.2%); C-B: Late ANC, facility delivery (n\u00A0=\u00A07,828; 60.1%); C-C: C-section/high PNC (n\u00A0=\u00A0910; 7.0%); C-D: Minimal utilisation (n\u00A0=\u00A01,143; 8.8%). Values are n (%) unless otherwise stated."));
 }
 
-// Table 1b — 2024 cluster-stratified demographics
+// Table 2b — 2024 cluster-stratified demographics
 C.push(sp(280));
-C.push(tblTitle("Table 1b. Sociodemographic Characteristics by Cluster: MDHS 2024 (K\u00A0=\u00A03)"));
+C.push(tblTitle("Table 2b. Sociodemographic Characteristics by Cluster: MDHS 2024 (K\u00A0=\u00A03)"));
 {
   // Display order: C-1 (c0), C-2 (c2), C-3 (c1) — matching manuscript labels
   const cw = [2760, 1650, 1650, 1650, 1650];
@@ -422,7 +476,7 @@ C.push(tblTitle("Table 1b. Sociodemographic Characteristics by Cluster: MDHS 202
 
 // Table 2
 C.push(sp(240));
-C.push(tblTitle("Table 2. Maternal Care Utilisation Indicators: MDHS 2015 vs 2024"));
+C.push(tblTitle("Table 3. Maternal Care Utilisation Indicators: MDHS 2015 vs 2024"));
 {
   const cw = [3360,1500,1500,1500,1500];
   C.push(new Table({ width:{size:CONTENT_W, type:WidthType.DXA}, columnWidths:cw, rows:[
@@ -444,7 +498,7 @@ C.push(tblTitle("Table 2. Maternal Care Utilisation Indicators: MDHS 2015 vs 202
 
 // Table 3
 C.push(pb());
-C.push(tblTitle("Table 3. Cluster Profiles: MDHS 2015 (K = 4) and MDHS 2024 (K = 3)"));
+C.push(tblTitle("Table 4. Cluster Profiles: MDHS 2015 (K = 4) and MDHS 2024 (K = 3)"));
 {
   const cw = [2160,1029,1029,1029,1029,1029,1029,1016];
   C.push(new Table({ width:{size:CONTENT_W, type:WidthType.DXA}, columnWidths:cw, rows:[
@@ -471,7 +525,7 @@ C.push(tblTitle("Table 3. Cluster Profiles: MDHS 2015 (K = 4) and MDHS 2024 (K =
 
 // Table 4
 C.push(sp(240));
-C.push(tblTitle("Table 4. Subgroup Association with Cluster Membership (Cram\u00E9r\u2019s V)"));
+C.push(tblTitle("Table 5. Subgroup Association with Cluster Membership (Cram\u00E9r\u2019s V)"));
 {
   const cw = [1680,1200,1100,1100,1200,1100,1100,780];
   C.push(new Table({ width:{size:CONTENT_W, type:WidthType.DXA}, columnWidths:cw, rows:[
@@ -486,7 +540,7 @@ C.push(tblTitle("Table 4. Subgroup Association with Cluster Membership (Cram\u00
 
 // Table 5
 C.push(sp(240));
-C.push(tblTitle("Table 5. Top 5 Predictors of Cluster Membership (Random Forest Variable Importance)"));
+C.push(tblTitle("Table 6. Top 5 Predictors of Cluster Membership (Random Forest Variable Importance)"));
 {
   const cw = [936,2808,1248,2808,1560];
   C.push(new Table({ width:{size:CONTENT_W, type:WidthType.DXA}, columnWidths:cw, rows:[
@@ -502,7 +556,7 @@ C.push(tblTitle("Table 5. Top 5 Predictors of Cluster Membership (Random Forest 
 
 // Table 6 — Multinomial logistic regression OR table
 C.push(pb());
-C.push(tblTitle("Table 6. Adjusted Odds Ratios from Multinomial Logistic Regression: Predictors of Cluster Membership"));
+C.push(tblTitle("Table 7. Adjusted Odds Ratios from Multinomial Logistic Regression: Predictors of Cluster Membership"));
 C.push(note("Panel A: MDHS 2015 \u2014 Reference group: C-B (Late ANC, facility delivery; n\u00A0=\u00A07,828)"));
 {
   const cw = [2400, 2320, 2320, 2320];

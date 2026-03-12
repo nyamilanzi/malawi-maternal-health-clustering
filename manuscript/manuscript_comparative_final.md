@@ -55,6 +55,8 @@ Cluster prevalences were computed within strata of residence (urban/rural), weal
 
 ## Results
 
+The sociodemographic characteristics of the two analytic samples are summarised in Table 1. The 2024 sample was significantly younger (mean age 26.9 ± 6.9 vs 28.1 ± 7.0 years; p < 0.001), with a notably higher proportion of adolescent women aged 15–19 years (13.4% vs 8.5%). Women in 2024 had lower mean parity (2.7 ± 1.8 vs 3.3 ± 2.1; p < 0.001) and were less likely to be married (69.6% vs 76.9%; p < 0.001). The education profile improved substantially: the proportion with no formal education halved from 11.6% to 6.2%, while secondary education increased from 21.4% to 25.8% (overall chi-square p < 0.001). Both samples were predominantly rural (82.7% and 81.3%, respectively; p = 0.013), with similar regional distributions (p = 0.058). The proportion reporting distance as a barrier to accessing care declined modestly from 53.4% to 49.3% (p < 0.001).
+
 The 2015 analysis sample comprised **13,030 women** (mean age 28.1 years) and the 2024 sample comprised **6,925 women** (Table 1). Both samples were predominantly rural (approximately 83% in 2015 and 81% in 2024). Between survey rounds, all ANC indicators improved significantly (Table 2). Most notably, **early ANC initiation** increased from 26.0% to 57.5%, the largest single improvement observed across all indicators. Mean first ANC visit month advanced from 4.45 to 3.34 months into pregnancy (p < 0.001). Adequate ANC coverage increased from 51.9% to 66.6% (p < 0.001), and skilled birth attendance rose from 92.0% to 97.1% (p < 0.001). Facility delivery also improved from 94.8% to 97.6% (p < 0.001), while the caesarean section rate increased from 7.0% to 11.5% (p < 0.001). PNC receipt declined marginally from 45.1% to 43.2% (p = 0.013), and reporting of being informed about danger signs was stable (25.3% vs 24.8%; p = 0.421).
 
 [INSERT FIGURE 1 ABOUT HERE]
@@ -107,24 +109,38 @@ In conclusion, Malawi's maternal health system achieved substantial and measurab
 
 ## Tables
 
-### Table 1. Sociodemographic Characteristics of Study Samples
+### Table 1. Sociodemographic Characteristics of the 2015 and 2024 Analytic Samples
 
-| Characteristic | MDHS 2015 (n = 13,030) | MDHS 2024 (n = 6,925) |
-|---|---|---|
-| **Age, years (mean +/- SD)** | 28.1 +/- 7.0 | 26.9 +/- 6.9 |
-| **Age group, n (%)** | | |
-| Adolescent (15-19) | 1,109 (8.5%) | 928 (13.4%) |
-| Young adult (20-34) | 9,343 (71.7%) | 4,861 (70.2%) |
-| Older (35-49) | 2,578 (19.8%) | 1,136 (16.4%) |
-| **Residence, n (%)** | | |
-| Urban | 2,257 (17.3%) | 1,298 (18.7%) |
-| Rural | 10,773 (82.7%) | 5,627 (81.3%) |
-| **Wealth quintile, n (%)** | | |
-| Poorest | 2,767 (21.2%) | 1,527 (22.0%) |
-| Poorer | 2,715 (20.8%) | 1,208 (17.4%) |
-| Middle | 2,511 (19.3%) | 1,196 (17.3%) |
-| Richer | 2,510 (19.3%) | 1,289 (18.6%) |
-| Richest | 2,527 (19.4%) | 1,448 (20.9%) |
+| Characteristic | MDHS 2015 (n = 13,030) | MDHS 2024 (n = 6,925) | p-value |
+|---|---|---|---|
+| **Age, years (mean ± SD)** | 28.1 ± 7.0 | 26.9 ± 6.9 | <0.001 |
+| **Age group, n (%)** | | | <0.001 |
+| Adolescent (15–19) | 1,109 (8.5%) | 928 (13.4%) | |
+| Young adult (20–34) | 9,343 (71.7%) | 4,861 (70.2%) | |
+| Older (35–49) | 2,578 (19.8%) | 1,136 (16.4%) | |
+| **Residence, n (%)** | | | 0.013 |
+| Urban | 2,257 (17.3%) | 1,298 (18.7%) | |
+| Rural | 10,773 (82.7%) | 5,627 (81.3%) | |
+| **Wealth quintile, n (%)** | | | <0.001 |
+| Poorest | 2,767 (21.2%) | 1,527 (22.1%) | |
+| Poorer | 2,715 (20.8%) | 1,208 (17.4%) | |
+| Middle | 2,511 (19.3%) | 1,196 (17.3%) | |
+| Richer | 2,510 (19.3%) | 1,289 (18.6%) | |
+| Richest | 2,527 (19.4%) | 1,448 (20.9%) | |
+| **Education level, n (%)** | | | <0.001 |
+| No education | 1,516 (11.6%) | 427 (6.2%) | |
+| Primary | 8,484 (65.1%) | 4,522 (65.3%) | |
+| Secondary | 2,786 (21.4%) | 1,786 (25.8%) | |
+| Higher | 244 (1.9%) | 190 (2.7%) | |
+| **Parity (mean ± SD)** | 3.3 ± 2.1 | 2.7 ± 1.8 | <0.001 |
+| **Married, n (%)** | 10,022 (76.9%) | 4,820 (69.6%) | <0.001 |
+| **Distance barrier to care, n (%)** | 6,963 (53.4%) | 3,417 (49.3%) | <0.001 |
+| **Region, n (%)** | | | 0.058 |
+| Northern | 2,490 (19.1%) | 1,418 (20.5%) | |
+| Central | 4,514 (34.6%) | 2,332 (33.7%) | |
+| Southern | 6,026 (46.2%) | 3,175 (45.8%) | |
+
+*p-values: Welch's t-test (continuous variables), chi-square test (categorical variables). Reference for sub-categories: chi-square p-value reported on the category-level row.*
 
 ---
 
